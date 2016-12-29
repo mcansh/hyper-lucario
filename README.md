@@ -1,4 +1,4 @@
-A [HyperTerm](https://hyperterm.org) theme, based of the [Lucario](https://github.com/raphamorim/lucario) syntax theme. Repo based off [hyperterm-panda](https://github.com/siamak/hyperterm-panda)
+A [HyperTerm](https://hyperterm.org) theme, based off the [Lucario](https://github.com/raphamorim/lucario) syntax theme. Repo based off [hyperterm-panda](https://github.com/siamak/hyperterm-panda)
 
 ---
 ![Main ScreenShot](/main.jpg)
