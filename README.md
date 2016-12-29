@@ -1,7 +1,7 @@
 A [HyperTerm](https://hyper.is) theme, based off the [Lucario](https://github.com/raphamorim/lucario) syntax theme. Repo based off [hyperterm-panda](https://github.com/siamak/hyperterm-panda)
 
 ---
-![Main ScreenShot](/main.jpg)
+![Main ScreenShot](https://raw.githubusercontent.com/mcansh/hyperterm-lucario/master/main.jpg)
 
 ---
 
