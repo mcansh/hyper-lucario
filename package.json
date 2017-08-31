@@ -2,7 +2,9 @@
   "name": "hyperterm-lucario",
   "version": "0.0.2",
   "keywords": [
-    "hyperterm"
+    "hyperterm",
+    "hyper",
+    "lucario"
   ],
   "description": "",
   "dependencies": {}
