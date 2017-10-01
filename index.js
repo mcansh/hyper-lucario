@@ -20,7 +20,7 @@ const LIGHTYELLOW = '#EAC72E';
 const LIGHTBLUE = '#4F93D8';
 const LIGHTMAGENTA = '#954EB4';
 const LIGHTCYAN = '#45BD9A';
-const LIGHTWHITE = '#ffffff'
+const LIGHTWHITE = '#ffffff';
 
 const colors = {
   black: BLACK,
@@ -37,26 +37,26 @@ const colors = {
   lightBlue: LIGHTBLUE,
   lightMagenta: LIGHTMAGENTA,
   lightCyan: LIGHTCYAN,
-  lightWhite: LIGHTWHITE
+  lightWhite: LIGHTWHITE,
 };
 
 // Apply theme
-exports.decorateConfig = (config) => (
-    Object.assign({}, config, {
-        backgroundColor,
-        foregroundColor,
-        borderColor: borderColor,
-        cursorColor: foregroundColor,
-        colors,
-        css: `
+exports.decorateConfig = config =>
+  Object.assign({}, config, {
+    backgroundColor,
+    foregroundColor,
+    borderColor,
+    cursorColor: foregroundColor,
+    colors,
+    css: `
       ${config.css || ''}
-    .tab_tab .tab_icon {
-      left: 7px;
-      right: initial;
-    }
-	  .terms_term x-row{
-		  height: 24px;
-	  }
+      .tab_tab .tab_icon {
+        left: 7px;
+        right: initial;
+      }
+      .terms_term x-row{
+        height: 24px;
+      }
       /* Highlight active tab by making rest of nav darker */
       .tabs_list {
         background-color: ${darkerBackground} !important;
@@ -89,20 +89,5 @@ exports.decorateConfig = (config) => (
         background-color: rgba(255, 255, 255, .025);
         opacity: 1;
       }
-    `
-    })
-);
-
-// Development middleware for HMR
-exports.middleware = () => (next) => (action) => {
-    /* eslint-disable no-param-reassign, default-case */
-    switch (action.type) {
-        case 'CONFIG_LOAD':
-        case 'CONFIG_RELOAD':
-            action.config.foregroundColor = foregroundColor;
-            action.config.backgroundColor = backgroundColor;
-            action.config.cursorColor = foregroundColor;
-            action.config.colors = colors;
-    }
-    next(action);
-};
+    `,
+  });
